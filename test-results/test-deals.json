@@ -1,0 +1,32 @@
+[
+  {
+    "id": "353654830814",
+    "dealname": "Qualified Lead - Acme",
+    "amount": 5000,
+    "dealstage": "qualifiedtobuy"
+  },
+  {
+    "id": "353702102723",
+    "dealname": "Presentation - Globex",
+    "amount": 25000,
+    "dealstage": "presentationscheduled"
+  },
+  {
+    "id": "353542621945",
+    "dealname": "Closed Won - Initech",
+    "amount": 50000,
+    "dealstage": "closedwon"
+  },
+  {
+    "id": "353702130405",
+    "dealname": "Closed Lost - Umbrella",
+    "amount": 75000,
+    "dealstage": "closedlost"
+  },
+  {
+    "id": "353521444598",
+    "dealname": "Qualified Enterprise - Hooli",
+    "amount": 100000,
+    "dealstage": "qualifiedtobuy"
+  }
+]

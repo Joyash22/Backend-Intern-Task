@@ -1,0 +1,9 @@
+﻿      id      |           dealname           |  amount   |       dealstage       
+--------------+------------------------------+-----------+-----------------------
+ 353521444598 | Qualified Enterprise - Hooli | 100000.00 | qualifiedtobuy
+ 353542621945 | Closed Won - Initech         |  50000.00 | closedwon
+ 353654830814 | Qualified Lead - Acme        |   5000.00 | qualifiedtobuy
+ 353702102723 | Presentation - Globex        |  25000.00 | presentationscheduled
+ 353702130405 | Closed Lost - Umbrella       |  75000.00 | closedlost
+(5 rows)
+

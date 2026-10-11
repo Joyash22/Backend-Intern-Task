@@ -1,0 +1,57 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /usr/bin/python
+cachedir: .pytest_cache
+rootdir: /home/claude/hubspot-deals-etl
+plugins: anyio-4.15.1
+collecting ... collected 46 items
+
+tests/test_data_source.py::test_transform_types_and_metadata PASSED      [  2%]
+tests/test_data_source.py::test_transform_handles_nulls_and_epoch_millis PASSED [  4%]
+tests/test_data_source.py::test_transform_bad_values_become_null PASSED  [  6%]
+tests/test_extraction_e2e.py::test_full_extraction_five_deals PASSED     [  8%]
+tests/test_extraction_e2e.py::test_checkpoint_and_resume_after_failure PASSED [ 10%]
+tests/test_extraction_e2e.py::test_rescan_is_idempotent PASSED           [ 13%]
+tests/test_extraction_e2e.py::test_cleanup_removes_data PASSED           [ 15%]
+tests/test_extraction_e2e.py::test_hubspot_unauthorized_marks_job_failed PASSED [ 17%]
+tests/test_hubspot_api_service.py::test_empty_token_rejected PASSED      [ 19%]
+tests/test_hubspot_api_service.py::test_pagination_follows_cursor PASSED [ 21%]
+tests/test_hubspot_api_service.py::test_auth_errors_not_retried[401] PASSED [ 23%]
+tests/test_hubspot_api_service.py::test_auth_errors_not_retried[403] PASSED [ 26%]
+tests/test_hubspot_api_service.py::test_429_retries_using_retry_after_then_succeeds PASSED [ 28%]
+tests/test_hubspot_api_service.py::test_429_exhausts_retries PASSED      [ 30%]
+tests/test_hubspot_api_service.py::test_5xx_retried_then_raises PASSED   [ 32%]
+tests/test_hubspot_api_service.py::test_400_not_retried PASSED           [ 34%]
+tests/test_hubspot_api_service.py::test_rate_limiter_blocks_when_window_full PASSED [ 36%]
+tests/test_seeded_and_edge.py::test_health_both_paths PASSED             [ 39%]
+tests/test_seeded_and_edge.py::test_status_matches_seed PASSED           [ 41%]
+tests/test_seeded_and_edge.py::test_result_for_seeded_completed_job PASSED [ 43%]
+tests/test_seeded_and_edge.py::test_list_jobs_and_filter PASSED          [ 45%]
+tests/test_seeded_and_edge.py::test_statistics PASSED                    [ 47%]
+tests/test_seeded_and_edge.py::test_cancel_pending_job PASSED            [ 50%]
+tests/test_seeded_and_edge.py::test_remove_seeded_job PASSED             [ 52%]
+tests/test_seeded_and_edge.py::test_start_validation_errors[body0] PASSED [ 54%]
+tests/test_seeded_and_edge.py::test_start_validation_errors[body1] PASSED [ 56%]
+tests/test_seeded_and_edge.py::test_start_validation_errors[body2] PASSED [ 58%]
+tests/test_seeded_and_edge.py::test_start_validation_errors[body3] PASSED [ 60%]
+tests/test_seeded_and_edge.py::test_malformed_json_body PASSED           [ 63%]
+tests/test_seeded_and_edge.py::test_unknown_job_is_404[get-status] PASSED [ 65%]
+tests/test_seeded_and_edge.py::test_unknown_job_is_404[get-result] PASSED [ 67%]
+tests/test_seeded_and_edge.py::test_unknown_job_is_404[post-cancel] PASSED [ 69%]
+tests/test_seeded_and_edge.py::test_unknown_job_is_404[delete-remove] PASSED [ 71%]
+tests/test_seeded_and_edge.py::test_id_injection_rejected[abc] PASSED    [ 73%]
+tests/test_seeded_and_edge.py::test_id_injection_rejected[1; DROP TABLE scan_jobs;--] PASSED [ 76%]
+tests/test_seeded_and_edge.py::test_id_injection_rejected[aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa] PASSED [ 78%]
+tests/test_seeded_and_edge.py::test_id_injection_rejected[' OR '1'='1] PASSED [ 80%]
+tests/test_seeded_and_edge.py::test_results_for_incomplete_job_409 PASSED [ 82%]
+tests/test_seeded_and_edge.py::test_cancel_terminal_job_409[done] PASSED [ 84%]
+tests/test_seeded_and_edge.py::test_cancel_terminal_job_409[failed] PASSED [ 86%]
+tests/test_seeded_and_edge.py::test_cancel_terminal_job_409[cancelled] PASSED [ 89%]
+tests/test_seeded_and_edge.py::test_concurrent_start_same_tenant_409 PASSED [ 91%]
+tests/test_seeded_and_edge.py::test_resume_only_failed_or_cancelled PASSED [ 93%]
+tests/test_seeded_and_edge.py::test_bad_pagination_and_status_filter PASSED [ 95%]
+tests/test_seeded_and_edge.py::test_api_key_enforced_when_configured PASSED [ 97%]
+tests/test_seeded_and_edge.py::test_orphaned_jobs_failed_on_startup_and_resumable PASSED [100%]
+
+../../../usr/local/lib/python3.12/dist-packages/fastapi/testclient.py:1
+    from starlette.testclient import TestClient as TestClient  # noqa
+

@@ -1,0 +1,20 @@
+# Local smoke test (DESTINATION=duckdb, no Docker) - 2026-10-10T17:21:31Z
+$ curl localhost:5200/health
+{"status":"ok","service":"hubspot_deals","environment":"development"}
+$ curl localhost:5200/api/v1/health
+{"status":"ok","service":"hubspot_deals","environment":"development"}
+$ GET /docs -> HTTP
+200
+$ OpenAPI paths
+/api/v1/health
+/api/v1/jobs/jobs
+/api/v1/jobs/statistics
+/api/v1/scan/cancel/{job_id}
+/api/v1/scan/remove/{job_id}
+/api/v1/scan/result/{job_id}
+/api/v1/scan/resume/{job_id}
+/api/v1/scan/start
+/api/v1/scan/status/{job_id}
+/health
+$ POST /api/v1/scan/start {}
+{"detail":"Validation error","errors":[{"field":"access_token","message":"Field required"}]}
